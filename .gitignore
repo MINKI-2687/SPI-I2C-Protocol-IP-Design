@@ -1,0 +1,95 @@
+# ==========================================
+# System Semiconductor Project .gitignore
+# (Vivado Tcl-based Flow & Vitis Workspace)
+# ==========================================
+
+# --- 1. Vivado: 임시 파일 및 로그 ---
+*.log
+*.jou
+*.str
+*.pb
+*.os
+*.vdi
+*.vds
+*.webtalk
+*.zip
+
+# --- 2. Vivado: 프로젝트 로컬 설정 및 자동 생성 폴더 ---
+# Tcl로 복구할 것이므로 로컬 설정과 캐시는 제외합니다
+.Xil/
+.cache/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/
+*.xpr
+
+# --- 3. Vivado: 시뮬레이션 및 디버깅 ---
+xsim.dir/
+xvlog.log
+xelab.log
+xvlog.pb
+xelab.pb
+*.wcfg 
+*.wdb
+
+# --- 4. Vivado: 빌드 결과물 및 하드웨어 Handoff ---
+*.bak
+*.html
+*.xml
+*.bit
+*.bin
+*.mcs
+*.prm
+*.ltx
+*.xsa
+
+# ==========================================
+# 5. Vitis & Eclipse IDE (소프트웨어 워크스페이스)
+# ==========================================
+# IDE 설정 및 메타데이터 (Git 오염의 주범)
+**/.metadata/
+**/.analytics/
+**/.settings/
+**/.indexes/
+**/.plugins/
+**/org.eclipse.*/
+**/.safetable/
+
+# 프로젝트 로컬 설정 파일 (다른 PC에서 열 때 경로 충돌 방지)
+**/.cproject
+**/.project
+**/*.sprj
+
+# Vitis 플랫폼 자동 생성 폴더 및 파일
+**/export/
+**/*.mmi
+**/*.readme
+**/*.snap
+**/platform.tcl
+
+# C/C++ 컴파일 결과물 (소스 코드만 남기고 바이너리는 무시)
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.a
+*.out
+
+# ==========================================
+# 6. 예외 규칙 (이 폴더/파일들은 무조건 추적)
+# ==========================================
+!rtl/
+!sim/
+!xdc/
+!scripts/
+!ip_repo/
+!*.tcl
+!*.c
+!*.h
+!README.md
+!.gitignore
