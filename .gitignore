@@ -4,7 +4,6 @@
 # ==========================================
 
 # --- 1. Vivado: 임시 파일 및 로그 ---
-*.log
 *.jou
 *.str
 *.pb
@@ -39,7 +38,6 @@ xelab.pb
 # --- 4. Vivado: 빌드 결과물 및 하드웨어 Handoff ---
 *.bak
 *.html
-*.xml
 *.bit
 *.bin
 *.mcs
@@ -81,9 +79,35 @@ Release/
 *.out
 
 # ==========================================
-# 6. 예외 규칙 (이 폴더/파일들은 무조건 추적)
+# 6. VCS/Synopsys 시뮬레이션 빌드 아티팩트
+# ==========================================
+simv
+simv.daidir/
+simv.vdb/
+csrc/
+coverage.vdb/
+*.fsdb
+*.fsdb.*
+*.key
+*.log
+*.conf
+*Log
+vc_hdrs.h
+.fsm.sch.verilog.xml
+novas.*
+cm.log
+tr_db.log
+ucli.key
+
+# Vim swap files
+*.swp
+*.swo
+
+# ==========================================
+# 7. 예외 규칙 (이 폴더/파일들은 무조건 추적)
 # ==========================================
 !rtl/
+!tb/
 !sim/
 !xdc/
 !scripts/
@@ -93,3 +117,5 @@ Release/
 !*.h
 !README.md
 !.gitignore
+!Makefile
+!filelist.f
